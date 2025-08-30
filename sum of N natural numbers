@@ -1,11 +1,23 @@
-N = int(input("Enter the value of N: "))
+import java.util.Scanner;
 
-# Initialize sum
-total_sum = 0
+public class SumOfNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-# Loop from 1 to N (inclusive)
-for i in range(1, N + 1):
-    total_sum += i
+        // Input: Get the value of N from user
+        System.out.print("Enter the value of N: ");
+        int N = scanner.nextInt();
 
-# Output the result
-print(f"Sum of first {N} natural numbers is: {total_sum}")
+        int sum = 0;
+
+        // Loop to calculate sum of first N natural numbers
+        for (int i = 1; i <= N; i++) {
+            sum += i;
+        }
+
+        // Output the result
+        System.out.println("Sum of first " + N + " natural numbers is: " + sum);
+        
+        scanner.close();
+    }
+}
