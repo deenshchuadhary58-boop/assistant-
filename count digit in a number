@@ -1,0 +1,13 @@
+def count_digits(n):
+    count = 0
+    num = abs(n)  # Handle negative numbers
+    if num == 0:
+        return 1
+    while num > 0:
+        num //= 10
+        count += 1
+    return count
+
+# Example usage:
+number = 12345
+print("Number of digits:", count_digits(number))
